@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bug Tracker Home</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">🐞 Bug Tracker</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/bugform">Report a Bug</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/buglist">View Bug List</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Welcome to the Bug Tracking System</h1>
+            <p class="col-md-8 fs-4">Use this system to report new bugs, view existing issues, and track their progress to resolution.</p>
+            <a href="/bugform" class="btn btn-primary btn-lg" role="button">Report a New Bug</a>
+            <a href="/buglist" class="btn btn-secondary btn-lg" role="button">View Bug List</a>
+        </div>
+    </div>
+</div>
+
+<script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
