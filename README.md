@@ -92,6 +92,14 @@ The application is designed to work with the following table structure in MySQL.
 ## 📸 Screenshots
 
 
+**Homepage:**
+![Homepage](screenshots/homepage.png)
+
+**Bug Report Form:**
+![Bug Report Form](screenshots/bug-form.png)
+
+**Bug List:**
+![Bug List](screenshots/bug-list.png)
 
 ---
 ## 📌 Future Improvements
