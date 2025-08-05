@@ -93,13 +93,13 @@ The application is designed to work with the following table structure in MySQL.
 
 
 **Homepage:**
-![Homepage](screenshots/homepage.png)
+![Homepage](screenshots/homepage.png.png)
 
 **Bug Report Form:**
-![Bug Report Form](screenshots/bug-form.png)
+![Bug Report Form](screenshots/bug-form.png.png)
 
 **Bug List:**
-![Bug List](screenshots/bug-list.png)
+![Bug List](screenshots/bug-list.png.png)
 
 ---
 ## 📌 Future Improvements
