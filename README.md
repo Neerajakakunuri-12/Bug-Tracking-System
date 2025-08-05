@@ -1,88 +1,105 @@
 # 🐞 Bug Tracking System
 
-This is a Java-based Bug Reporting and Tracking System that allows users to report bugs, assign them to developers, and track their status through a MySQL database.
+A complete web application built with Java, Spring Boot, and Thymeleaf for reporting and tracking software bugs. This project allows users to submit detailed bug reports through a web form and view a comprehensive list of all submitted bugs in a styled, responsive interface.
 
 ---
 
-## 🔧 Tech Stack
+## ✨ Features
 
-- **Java**
-- **JDBC**
-- **MySQL** (Workbench & Command Line)
-- **IntelliJ IDEA**
-- (Frontend: To be added later using HTML/CSS/JS)
-- (Spring Boot: Coming soon)
+* **Report Bugs:** A user-friendly form to submit new bug reports with details such as Title, Description, Project Name, Priority, Status, Reporter, and Assigned Developer.
+* **View Bug List:** A clean, organized table that displays all reported bugs with color-coded priority badges.
+* **Styled UI:** A modern and responsive user interface built with the Bootstrap framework.
+* **Backend Logic:** Powered by Spring Boot to handle web requests and manage data.
 
 ---
 
-## ✅ Features Implemented
+## 🛠️ Tech Stack
 
-- Connects to MySQL using JDBC
-- Inserts new bug reports into the database
-- Stores details like:
-  - Bug ID
-  - Title
-  - Description
-  - Project Name
-  - Priority
-  - Status
-  - Reporter Name
-  - Developer Name
-  - Date & Time (Auto-generated)
+* **Backend:** Java 17+, Spring Boot, Spring Web (MVC)
+* **Frontend:** Thymeleaf, HTML5, Bootstrap 5
+* **Database:** MySQL
+* **Build Tool:** Maven
 
 ---
 
-## 🚀 How to Run
+## 🚀 Getting Started
 
-1. Clone the repository:
-https://github.com/Neerajakakunuri-12/Bug-Tracking-System.git
+To get a local copy up and running, follow these simple steps.
 
-2. Open the project in IntelliJ IDEA.
-3. Make sure MySQL is running and your `url`, `username`, `password` in `Main.java` are correct.
-4. Run `Main.java` to test database connection and insert data.
+### Prerequisites
+
+You need to have the following software installed on your machine:
+* Java Development Kit (JDK) 17 or later
+* Apache Maven
+* MySQL Server (and a client like MySQL Workbench)
+* An IDE like IntelliJ IDEA or VS Code
+
+### Installation & Setup
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/Neerajakakunuri-12/Bug-Tracking-System.git](https://github.com/Neerajakakunuri-12/Bug-Tracking-System.git)
+    ```
+
+2.  **Navigate to the project directory:**
+    ```bash
+    cd Bug-Tracking-System
+    ```
+
+3.  **Setup the Database:**
+    * Make sure your MySQL server is running.
+    * Create a new database schema (e.g., `bugtracker_db`).
+    * The repository may contain a `.sql` file to create the `bug_reports` table. If so, run that script in your new database schema.
+
+4.  **Configure the Application:**
+    * Open the `src/main/resources/application.properties` file.
+    * **Important:** Right now, the project is configured to exclude the database connection. To connect to your MySQL database in the future, you would update this file with your database URL, username, and password like this:
+        ```properties
+        # spring.datasource.url=jdbc:mysql://localhost:3306/bugtracker_db
+        # spring.datasource.username=your_mysql_username
+        # spring.datasource.password=your_mysql_password
+        # spring.jpa.hibernate.ddl-auto=update
+        ```
+
+5.  **Build and Run:**
+    * Build the project using Maven: `mvn clean install`
+    * Run the application: `mvn spring-boot:run` (or by running the `BugtrackerApplication.java` file from your IDE).
+
+6.  **Access the application:**
+    * Open your web browser and navigate to `http://localhost:8080`
 
 ---
-
 ## 🗂 Database Table Structure
 
-Table name: `bug_reports`
+The application is designed to work with the following table structure in MySQL.
 
-__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ _
-| Column Name      | Data Type                           |
-|------------------|------------------------------------ |
-| bug_id           | INT (AUTO_INCREMENT, PRIMARY KEY)   |
-| title            | VARCHAR(100)                        |
-| description      | TEXT                                |
-| project_name     | VARCHAR(100)                        |
-| priority         | VARCHAR(50)                         |
-| status           | VARCHAR(50)                         |
-| reporter_name    | VARCHAR(100)                        |
-| developer_name   | VARCHAR(100)                        |
-| date_reported    | TIMESTAMP DEFAULT CURRENT_TIMESTAMP |
-__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ _
+**Table name: `bug_reports`**
 
----
-
-## 📌 TODO (Next Steps)
-
-- Add frontend using HTML/CSS/JavaScript
-- Integrate Spring Boot instead of plain JDBC
-- Add features like bug editing, deleting, filtering
-- Authentication system for reporters and developers
+| Column Name      | Data Type                         |
+| ---------------- | --------------------------------- |
+| `bug_id`         | INT (AUTO_INCREMENT, PRIMARY KEY) |
+| `title`          | VARCHAR(100)                      |
+| `description`    | TEXT                              |
+| `project_name`   | VARCHAR(100)                      |
+| `priority`       | VARCHAR(50)                       |
+| `status`         | VARCHAR(50)                       |
+| `reporter_name`  | VARCHAR(100)                      |
+| `developer_name` | VARCHAR(100)                      |
+| `date_reported`  | TIMESTAMP DEFAULT CURRENT_TIMESTAMP |
 
 ---
 
 ## 📸 Screenshots
-*Coming soon*
+
+
 
 ---
+## 📌 Future Improvements
 
-## 📁 Project Status
-
-🟢 Backend base completed (Java + JDBC)  
-🔜 Frontend and Spring Boot implementation in progress
-
----
+-   [ ] Fully connect the application to the MySQL database using Spring Data JPA.
+-   [ ] Implement bug editing and deleting functionality.
+-   [ ] Add a user authentication system for reporters and developers.
+-   [ ] Implement filtering and sorting for the bug list.
 
 ## 📬 Contact
 
